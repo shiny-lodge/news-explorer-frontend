@@ -1,0 +1,205 @@
+.search-form {
+  background-image: url(../../images/phone.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 576px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.search-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.search-form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-form__title {
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.75rem;
+  line-height: 4rem;
+  max-width: 608px;
+  margin-top: 160px;
+  margin-bottom: 32px;
+  z-index: 0;
+}
+
+.search-form__paragraph {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  max-width: 545px;
+  margin-top: 0px;
+  margin-bottom: 64px;
+  z-index: 0;
+}
+
+.search-form__search-bar {
+  width: 100%;
+  max-width: 608px;
+  display: flex;
+}
+
+.search-form__input {
+  width: 490px;
+  height: 64px;
+  border: 1px solid #d1d2d6;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  padding-left: 24px;
+  padding-right: 90px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #1a1b22;
+}
+
+.search-form__input:focus {
+  outline: none;
+}
+
+.search-form__input::placeholder {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #B6BCBF;
+}
+
+.search-form__submit-button {
+  width: 168px;
+  height: 64px;
+  background-color: #2f71e5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  border-radius: 100px;
+  padding: 10px;
+  border: none;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #fff;
+  margin-left: -50px;
+  z-index: 1;
+}
+
+.search-form__submit-button:focus {
+  outline: none;
+}
+
+.search-form__submit-button:hover {
+  cursor: pointer;
+  background-color: #347eff;
+}
+
+.search-form__submit-button:active {
+  background-color: #2a65cc;
+}
+
+@media screen and (max-width: 1023px) {
+  .search-form {
+    min-height: 400px;
+  }
+
+  .search-form__title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    max-width: 385px;
+    margin-top: 104px;
+    margin-bottom: 16px;
+  }
+
+  .search-form__paragraph {
+    max-width: 452px;
+    margin-bottom: 48px;
+  }
+
+  .search-form__search-bar {
+    max-width: 452px;
+  }
+
+  .search-form__input {
+    width: 342px;
+    height: 56px;
+    backdrop-filter: blur(100px);
+  }
+
+  .search-form__submit-button {
+    width: 160px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-form__title {
+    max-width: 393px;
+  }
+
+  .search-form__paragraph {
+    max-width: 393px;
+  }
+
+  .search-form__search-bar {
+    max-width: 393px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .search-form {
+    min-height: 536px;
+  }
+
+  .search-form__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .search-form__title {
+    max-width: 288px;
+    margin-top: 86px;
+  }
+
+  .search-form__paragraph {
+    max-width: 288px;
+    margin-bottom: 122px;
+  }
+
+  .search-form__search-bar {
+    max-width: 288px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form__input {
+    width: 100%;
+    height: 56px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .search-form__submit-button {
+    width: 100%;
+    height: 56px;
+    margin-left: 0;
+  }
+}
