@@ -28,7 +28,8 @@ function Header(props) {
         loggedIn={props.loggedIn}
         mobileMenuOpened={props.mobileMenuOpened}
         openLoginPopup={props.openLoginPopup}
-        handleLogout={props.handleLogout}
+        onSignOut={props.onSignOut}
+        currentUser={props.currentUser}
       />
     </header>
   )

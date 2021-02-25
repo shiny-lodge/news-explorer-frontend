@@ -1,13 +1,11 @@
 .header {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1232px;
   min-height: 80px;
   background-color: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
-  padding-left: 104px;
-  padding-right: 104px;
   box-sizing: border-box;
   z-index: 2;
   position: relative;
@@ -52,6 +50,13 @@
 
 .header__menu-button_opened_dark {
   background-image: url('../../images/mobile-menu-opened-dark.svg');
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    padding-left: 104px;
+    padding-right: 104px;
+  }
 }
 
 @media screen and (max-width: 1023px) {

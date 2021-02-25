@@ -8,7 +8,7 @@ import vk from '../../images/vk-icon.svg';
 function Footer(props) {
   return (
     <footer className="footer">
-      <p className="footer__copyright">© 2020 Dan Lomovitsky, Powered by News API</p>
+      <p className="footer__copyright">© 2020 Daniil Lomovitsky, Powered by News API</p>
       <ul className="footer__container">
         <div className="footer__links">
           <li>

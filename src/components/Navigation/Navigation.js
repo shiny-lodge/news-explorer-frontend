@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 import './Navigation.css';
 import logoutIcon from '../../images/logout.svg';
 import logoutIconDark from '../../images/logout-dark.svg';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 function Navigation(props) {
+  const currentUser = React.useContext(CurrentUserContext);
+
   return (
     <nav className={
       props.activePage === 'main'
@@ -32,9 +35,9 @@ function Navigation(props) {
           ? 'navigation__logout-button'
           : 'navigation__logout-button navigation__logout-button_color_dark'}
           type="button"
-          onClick={props.handleLogout}
+          onClick={props.onSignOut}
         >
-          Жак
+          {currentUser.name}
           <img className="navigation__logout-icon" src={props.activePage === 'main' ? logoutIcon : logoutIconDark} alt="Иконка выхода." />
         </button>
         : <button className="navigation__auth-button" type="button" onClick={props.openLoginPopup}>Авторизоваться</button>}
