@@ -30,3 +30,4 @@ npm run build - сборка
 * https://www.lomovitsky.ru
 
 А пока там плейсхолдер.
+
