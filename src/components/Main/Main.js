@@ -9,12 +9,21 @@ import About from '../About/About';
 function Main(props) {
   return (
     <>
-      <SearchForm />
-      {/* <Preloader /> */}
+      <SearchForm
+        searchQuery={props.searchQuery}
+        searchQueryError={props.searchQueryError}
+        onChange={props.handleSearchQueryChange}
+        onSearch={props.onSearch}
+      />
+      {props.loading && <Preloader />}
       <NewsCardList
         activePage={props.activePage}
-        searchQueryResults={props.searchQueryResults}
+        searchQueryResultsShown={props.searchQueryResultsShown}
+        searchQueryResultsHidden={props.searchQueryResultsHidden}
+        handleShowMoreClick={props.handleShowMoreClick}
         loggedIn={props.loggedIn}
+        onSaveButtonClick={props.onSaveButtonClick}
+        searchQueryFailed={props.searchQueryFailed}
       />
       <About />
     </>
